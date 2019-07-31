@@ -1,4 +1,7 @@
 {
   "private": true,
-  "workspaces": ["packages/*"]
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "dev": "cd packages/frontend && yarn dev"
+  }
 }
