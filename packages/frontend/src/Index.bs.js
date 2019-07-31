@@ -3,15 +3,12 @@
 
 var React = require("react");
 var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
-var Component1$Tripdeer = require("./Component1.bs.js");
-var Component2$Tripdeer = require("./Component2.bs.js");
+var App$Tripdeer = require("./App.bs.js");
 
-ReactDOMRe.renderToElementWithId(React.createElement(Component1$Tripdeer.make, {
+((require("./assets/css/dashboard.css")));
+
+ReactDOMRe.renderToElementWithId(React.createElement(App$Tripdeer.make, {
           message: "Hello! Click this nihao."
-        }), "index1");
-
-ReactDOMRe.renderToElementWithId(React.createElement(Component2$Tripdeer.make, {
-          greeting: "Hello!"
-        }), "index2");
+        }), "root");
 
 /*  Not a pure module */

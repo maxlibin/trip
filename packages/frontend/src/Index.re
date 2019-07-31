@@ -1,3 +1,3 @@
-ReactDOMRe.renderToElementWithId(<Component1 message="Hello! Click this nihao." />, "index1");
+[%bs.raw {|require("./assets/css/dashboard.css")|}];
 
-ReactDOMRe.renderToElementWithId(<Component2 greeting="Hello!" />, "index2");
+ReactDOMRe.renderToElementWithId(<App message="Hello! Click this nihao." />, "root");

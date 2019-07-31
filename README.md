@@ -21,6 +21,9 @@ in the root folder, this will install node_modules into root folder and alias to
 yarn dev
 ```
 
+Open your browser with port 3000, `http://localhost:3000`
+
+
 ### Mobile:
 
 Mobile version currently using expo, so you have to install expo, and do: ‘yarn install’ 
