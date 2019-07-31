@@ -27,3 +27,24 @@ Mobile version currently using expo, so you have to install expo, and do: ‘yar
 
 
 
+# Git instructions
+
+Always do git pull before changing anything
+
+```
+git pull
+```
+
+After changed something, you can change what was changed by running
+```
+git status
+```
+
+and if changes is right, then run commit by
+```
+git add --all
+
+git commit -m "Some text of what you have changed"
+
+git push
+```
