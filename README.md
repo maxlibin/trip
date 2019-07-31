@@ -23,5 +23,7 @@ yarn dev
 
 ### Mobile:
 
+Mobile version currently using expo, so you have to install expo, and do: ‘yarn install’ 
+
 
 
