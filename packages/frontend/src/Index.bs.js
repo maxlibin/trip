@@ -7,7 +7,7 @@ var Component1$Tripdeer = require("./Component1.bs.js");
 var Component2$Tripdeer = require("./Component2.bs.js");
 
 ReactDOMRe.renderToElementWithId(React.createElement(Component1$Tripdeer.make, {
-          message: "Hello! Click this text."
+          message: "Hello! Click this nihao."
         }), "index1");
 
 ReactDOMRe.renderToElementWithId(React.createElement(Component2$Tripdeer.make, {
