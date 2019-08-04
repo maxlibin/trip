@@ -10,8 +10,6 @@ import {
   View
 } from "react-native";
 
-import { MonoText } from "../components/StyledText";
-
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
@@ -136,16 +134,5 @@ const styles = StyleSheet.create({
   },
   navigationFilename: {
     marginTop: 5
-  },
-  helpContainer: {
-    marginTop: 15,
-    alignItems: "center"
-  },
-  helpLink: {
-    paddingVertical: 15
-  },
-  helpLinkText: {
-    fontSize: 14,
-    color: "#2e78b7"
   }
 });

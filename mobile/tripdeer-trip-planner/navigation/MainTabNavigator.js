@@ -7,7 +7,7 @@ import {
 
 import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../screens/HomeScreen";
-import LinksScreen from "../screens/LinksScreen";
+import MyTripScreen from "../screens/MyTripScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 
 let tabBarIconSize = 38;
@@ -38,14 +38,20 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = "";
 
-const LinksStack = createStackNavigator(
+const MyTripStack = createStackNavigator(
   {
-    Links: LinksScreen
+    Links: MyTripScreen
   },
-  config
+  {
+    ...config,
+    headerMode: "none",
+    navigationOptions: {
+      headerVisible: false
+    }
+  }
 );
 
-LinksStack.navigationOptions = {
+MyTripStack.navigationOptions = {
   tabBarLabel: "My Trip",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -60,7 +66,7 @@ LinksStack.navigationOptions = {
   )
 };
 
-LinksStack.path = "";
+MyTripStack.path = "";
 
 const SettingsStack = createStackNavigator(
   {
@@ -85,7 +91,7 @@ SettingsStack.path = "";
 const tabNavigator = createBottomTabNavigator(
   {
     HomeStack,
-    LinksStack,
+    MyTripStack,
     SettingsStack
   },
   {
