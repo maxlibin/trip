@@ -15,8 +15,6 @@ struct Header: View {
             Rectangle()
               .fill(/*@START_MENU_TOKEN@*/Color.orange/*@END_MENU_TOKEN@*/)
               .frame(height: 200.0)
-              
-              Text("teasdasd")
           }
         }
     }

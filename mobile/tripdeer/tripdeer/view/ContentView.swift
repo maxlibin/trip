@@ -12,16 +12,35 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Header()
+            
+            HStack{
+                Text("My trip")
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.leading)
+                    .padding(.leading)
+                    .frame(height: 30.0, alignment: .leading)
 
-            List {
-                Rectangle()
-                  .fill(/*@START_MENU_TOKEN@*/Color.orange/*@END_MENU_TOKEN@*/)
-                  .frame(height: 200.0)
+                 Spacer()
             }
+
+            MyTrip()
+            
+            HStack{
+                Text("Popular destination")
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.leading)
+                    .padding(.leading)
+                    .frame(height: 30.0, alignment: .leading)
+
+                 Spacer()
+            }
+            
 
             Rectangle()
                 .fill(Color.orange)
-               .frame(height: 200.0)
+                .frame(height: 160.0)
 
         }
     }
