@@ -17,6 +17,7 @@
 		55389B27235AA928001D41ED /* tripdeerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55389B26235AA928001D41ED /* tripdeerUITests.swift */; };
 		55389B36235BED5D001D41ED /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55389B35235BED5D001D41ED /* Header.swift */; };
 		55389B38235BF407001D41ED /* MyTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55389B37235BF407001D41ED /* MyTrip.swift */; };
+		55389B3A23649AD4001D41ED /* Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55389B3923649AD4001D41ED /* Popular.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		55389B28235AA928001D41ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55389B35235BED5D001D41ED /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		55389B37235BF407001D41ED /* MyTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrip.swift; sourceTree = "<group>"; };
+		55389B3923649AD4001D41ED /* Popular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popular.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				55389B08235AA926001D41ED /* ContentView.swift */,
 				55389B35235BED5D001D41ED /* Header.swift */,
 				55389B37235BF407001D41ED /* MyTrip.swift */,
+				55389B3923649AD4001D41ED /* Popular.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				55389B07235AA926001D41ED /* SceneDelegate.swift in Sources */,
 				55389B09235AA926001D41ED /* ContentView.swift in Sources */,
 				55389B38235BF407001D41ED /* MyTrip.swift in Sources */,
+				55389B3A23649AD4001D41ED /* Popular.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

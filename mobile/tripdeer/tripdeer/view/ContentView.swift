@@ -13,34 +13,9 @@ struct ContentView: View {
         VStack {
             Header()
             
-            HStack{
-                Text("My trip")
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.leading)
-                    .padding(.leading)
-                    .frame(height: 30.0, alignment: .leading)
-
-                 Spacer()
-            }
-
             MyTrip()
             
-            HStack{
-                Text("Popular destination")
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.leading)
-                    .padding(.leading)
-                    .frame(height: 30.0, alignment: .leading)
-
-                 Spacer()
-            }
-            
-
-            Rectangle()
-                .fill(Color.orange)
-                .frame(height: 160.0)
+            Popular()
 
         }
     }
