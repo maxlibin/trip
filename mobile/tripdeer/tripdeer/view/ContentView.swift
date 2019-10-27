@@ -9,15 +9,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    let titleColor:Color = Color.white
     var body: some View {
-        VStack {
-            Header()
+        ZStack {
+            Image("bg")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .clipped()
             
-            MyTrip()
-            
-            Popular()
+            VStack {
 
-        }
+                Header()
+                
+                ZStack {
+                    Rectangle()
+                        .opacity(0.33)
+                    
+                    VStack {
+                        MyTrip(color: titleColor)
+                        
+                        Popular(color: titleColor)
+                    }.padding()
+                }
+                
+                
+                
+            }
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 

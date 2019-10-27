@@ -9,30 +9,61 @@
 import SwiftUI
 
 struct Popular: View {
+    let title = "Popular desination"
+    var color:Color
     var body: some View {
         VStack {
-        
-            HStack{
-                Text("Popular destination")
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.leading)
-                    .padding(.leading)
-                    .frame(height: 30.0, alignment: .leading)
-
-                 Spacer()
-            }
+            Title(title: title, color: color)
+                .padding(.bottom)
             
-
-            Rectangle()
-                .fill(Color.orange)
-                .frame(height: 160.0)
+            
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack{
+                    VStack{
+                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
+                        
+                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
+                    }
+                    
+                    VStack{
+                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
+                        
+                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
+                    }
+                    VStack{
+                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
+                        
+                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
+                    }
+                    VStack{
+                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
+                        
+                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
+                    }
+                    VStack{
+                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
+                        
+                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
+                    }
+                    VStack{
+                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
+                        
+                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
+                    }
+                    VStack{
+                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
+                        
+                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
+                    }
+                }
+            }
         }
+        .frame(height: 200)
     }
 }
 
 struct Popular_Previews: PreviewProvider {
     static var previews: some View {
-        Popular()
+        Popular(color: Color.black)
     }
 }

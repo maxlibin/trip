@@ -11,11 +11,12 @@ import SwiftUI
 struct Header: View {
     var body: some View {
         VStack {
-          ZStack{
-            Rectangle()
-              .fill(/*@START_MENU_TOKEN@*/Color.orange/*@END_MENU_TOKEN@*/)
-              .frame(height: 200.0)
-          }
+            ZStack{
+               Spacer()
+                .frame(height: 250.0)
+            }
+            
+            
         }
     }
 }
