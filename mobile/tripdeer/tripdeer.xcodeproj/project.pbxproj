@@ -480,6 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"tripdeer/Preview Content\"";
+				DEVELOPMENT_TEAM = Y75FYDHX53;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = tripdeer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -499,6 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"tripdeer/Preview Content\"";
+				DEVELOPMENT_TEAM = Y75FYDHX53;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = tripdeer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

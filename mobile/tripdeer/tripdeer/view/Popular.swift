@@ -19,42 +19,16 @@ struct Popular: View {
             
             ScrollView(.horizontal, showsIndicators: false){
                 HStack{
-                    VStack{
-                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
-                        
-                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
-                    }
-                    
-                    VStack{
-                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
-                        
-                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
-                    }
-                    VStack{
-                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
-                        
-                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
-                    }
-                    VStack{
-                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
-                        
-                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
-                    }
-                    VStack{
-                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
-                        
-                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
-                    }
-                    VStack{
-                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
-                        
-                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
-                    }
-                    VStack{
-                        Image("japan").frame(width: 80.0, height: 80.0).clipped().cornerRadius(20)
-                        
-                        Text("japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white)
-                    }
+                   ForEach(0 ..< 10) { number in
+                        ZStack {
+                            Image("japan").frame(width: 105.0, height: 150.0).clipped().cornerRadius(5)
+                            Rectangle().opacity(0.2)
+                            VStack{
+                                Spacer()
+                                Text("Japan").font(.footnote).fontWeight(.light).foregroundColor(Color.white).padding(.bottom).frame(width: 80.0, alignment: .leading)
+                            }
+                        }
+                   }
                 }
             }
         }

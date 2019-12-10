@@ -8,35 +8,35 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    let titleColor:Color = Color.white
-    var body: some View {
-        ZStack {
-            Image("bg")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(minWidth: 0, maxWidth: .infinity)
-                .clipped()
-            
-            VStack {
+let titleColor:Color = Color.white
 
-                Header()
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            ZStack {
+                Image("bg")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .clipped()
                 
-                ZStack {
-                    Rectangle()
-                        .opacity(0.33)
-                    
-                    VStack {
-                        MyTrip(color: titleColor)
-                        
-                        Popular(color: titleColor)
-                    }.padding()
+                VStack {
+                    Header()
+                    ZStack {
+                        Rectangle()
+                            .opacity(0.33)
+                        VStack {
+                            MyTrip(color: titleColor)
+                            
+                            Popular(color: titleColor)
+                        }.padding()
+                    }
                 }
+            }.edgesIgnoringSafeArea(.all)
                 
-                
-                
-            }
-        }.edgesIgnoringSafeArea(.all)
+                .navigationBarTitle("Tripdeer")
+                .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.4, opacity: 1.0))
+        }
     }
 }
 
