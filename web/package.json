@@ -19,6 +19,7 @@
     "@ahrefs/bs-emotion": "^1.0.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-select": "^3.0.8",
     "reason-react": ">=0.7.0"
   },
   "devDependencies": {
