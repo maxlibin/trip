@@ -17,4 +17,11 @@ begin
     height (pct 100.);
     backgroundColor (`hex "e9e9e9");
   ];
+
+  global "h1, h2, h3, h4, h5, h6" [
+    fontFamily  "Roboto, sans-serif"; 
+    fontWeight 500;
+    margin `zero;
+    padding `zero;
+  ];
 end

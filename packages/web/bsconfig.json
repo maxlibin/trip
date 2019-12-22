@@ -7,7 +7,7 @@
     "dir" : "src",
     "subdirs" : true
   },
-  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header", "-open Belt"],
   "package-specs": [{
     "module": "commonjs",
     "in-source": true
@@ -15,12 +15,14 @@
   "warnings": {
     "error": "+A-d"
   },
-  "ppx-flags": ["@ahrefs/bs-emotion-ppx/bin/bs-emotion-ppx"],
+  "ppx-flags": ["bs-let/ppx", "@ahrefs/bs-emotion-ppx/bin/bs-emotion-ppx", "decco/ppx"],
   "suffix": ".bs.js",
   "namespace": true,
   "bs-dependencies": [
-    "reason-react",
-    "@ahrefs/bs-emotion"
+    "@ahrefs/bs-emotion",
+    "bs-fetch",
+    "decco",
+    "reason-react"
   ],
   "refmt": 3
 }
