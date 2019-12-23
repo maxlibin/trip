@@ -5,12 +5,13 @@
     "build": "bsb -make-world",
     "start": "bsb -clean-world && bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
-    "server": "moduleserve ./ --port 3000",
+    "server": "webpack-dev-server --mode=development --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@ahrefs/bs-dotenv": "https://github.com/ahrefs/bs-dotenv.git",
     "@ahrefs/bs-emotion": "^1.0.0",
     "bs-fetch": "^0.5.0",
     "bs-let": "^0.1.11",
@@ -23,6 +24,9 @@
   "devDependencies": {
     "@ahrefs/bs-emotion-ppx": "^1.0.0",
     "bs-platform": "^7.0.1",
-    "moduleserve": "^0.9.0"
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }

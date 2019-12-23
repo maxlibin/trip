@@ -14,7 +14,7 @@ let getCountries =
 let make = () => {
   React.useEffect0(() => {
     {
-      let%Async res = Promise.fetch("/public/data/countries.json");
+      let%Async res = Promise.fetch("./countries.json");
       // let x = Js.log(res->countries_decode);
       // Js.log(x->List.fromArray);
 
