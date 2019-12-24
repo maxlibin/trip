@@ -9,7 +9,7 @@
   },
   "bsc-flags": ["-bs-super-errors", "-bs-no-version-header", "-open Belt"],
   "package-specs": [{
-    "module": "commonjs",
+    "module": "es6",
     "in-source": true
   }],
   "warnings": {
