@@ -15,14 +15,16 @@
     "@ahrefs/bs-emotion": "^1.0.0",
     "bs-fetch": "^0.5.0",
     "bs-let": "^0.1.11",
+    "bs-webapi": "^0.15.6",
     "decco": "^1.1.1",
+    "dotenv-webpack": "^1.7.0",
+    "firebase": "^7.6.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-select": "^3.0.8",
     "reason-react": ">=0.7.0"
   },
   "devDependencies": {
-    "@ahrefs/bs-dotenv": "https://github.com/ahrefs/bs-dotenv.git",
     "@ahrefs/bs-emotion-ppx": "^1.0.0",
     "bs-platform": "^7.0.1",
     "dotenv": "^8.2.0",
