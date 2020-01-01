@@ -3,8 +3,8 @@ type options = {
   authDomain: string,
   databaseURL: string,
   projectId: string,
-  storageBucket: string,
-  messagingSenderId: string,
+  storageBucket: option(string),
+  messagingSenderId: option(string),
   appId: string,
 };
 

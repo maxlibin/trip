@@ -13,14 +13,8 @@ let getCountries =
 [@react.component]
 let make = () => {
   React.useEffect0(() => {
-    {
-      let%Async res = Promise.fetch("./countries.json");
-      // let x = Js.log(res->countries_decode);
-      // Js.log(x->List.fromArray);
+    Api.Fetch.passport("Afghanistan", res => Js.log(res))->ignore;
 
-      Js.Promise.resolve(res);
-    }
-    ->ignore;
     None;
   });
   <div className=Css.container>
