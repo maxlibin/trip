@@ -10,10 +10,13 @@ let getCountries =
     )
   ->List.toArray;
 
+let getData = (country: ReactSelect.Country.opt) =>
+  Api.Fetch.passport(country.label, res => Js.log(res))->ignore;
+
 [@react.component]
 let make = () => {
   React.useEffect0(() => {
-    Api.Fetch.passport("Afghanistan", res => Js.log(res))->ignore;
+    Api.Fetch.passport(AD->toString, res => Js.log(res))->ignore;
 
     None;
   });
@@ -28,6 +31,7 @@ let make = () => {
           name="from"
           className=Css.select
           options=getCountries
+          onChange={country => country->getData}
         />
         <ReactSelect.Country
           name="to"
