@@ -20,7 +20,7 @@ module Make = (T: T) => {
       ~options: array(opt)=?,
       ~placeholder: string=?,
       ~noOptionsMessage: string=?,
-      ~value: string=?,
+      ~value: opt=?,
       ~styles: 'style=?,
       ~children: React.element=?
     ) =>

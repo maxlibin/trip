@@ -25,6 +25,36 @@ let form = [%css [
     cursor `pointer;
   ];
 
+  select "[class*=\"select\"]" [
+    firstOfType [
+      select "> div[class$=\"control\"]" [
+        after [
+          content "From";
+          position `absolute;
+          top (`px 13);
+          fontSize (`px 9);
+          fontWeight 700;
+          right (`px 56);
+          opacity 0.7;
+        ]
+      ]
+    ];
+
+    lastOfType [
+      select "> div[class$=\"control\"]" [
+        after [
+          content "To";
+          position `absolute;
+          top (`px 13);
+          fontSize (`px 9);
+          fontWeight 700;
+          right (`px 56);
+          opacity 0.7;
+        ]
+      ]
+    ];
+  ];
+
   select "[class$=\"placeholder\"], [class$=\"singleValue\"], [class$=\"indicatorContainer\"]" [
     color Color.primary;
   ];

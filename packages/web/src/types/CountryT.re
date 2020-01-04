@@ -617,4 +617,17 @@ let visaFromInt =
   | 1 => ETA
   | 0 => Visa
   | (-1)
-  | _ => Destination /*   magic: [@decco.codec Decco.Codecs.magic] dic*/ /* }*/; /* [@decco*/ /* type countries = list([@decco.codec Decco.Codecs.magic] dict)*/ /* [@decco*/ /* type countries = list()*/
+  | _ => Destination;
+
+[@decco]
+type result = {
+  [@decco.key "Destination"]
+  destination: string,
+  [@decco.key "Passport"]
+  passport: string,
+  [@decco.key "Code"]
+  code: int,
+};
+
+[@decco]
+type results = list(result);
