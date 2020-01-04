@@ -619,6 +619,14 @@ let visaFromInt =
   | (-1)
   | _ => Destination;
 
+let visaToString =
+  fun
+  | VisaFree => "Visa free"
+  | VisaOnArraival => "Visa on arrival"
+  | ETA => "ETA"
+  | Visa => "Visa required"
+  | Destination => "Current location";
+
 [@decco]
 type result = {
   [@decco.key "Destination"]
@@ -629,5 +637,4 @@ type result = {
   code: int,
 };
 
-[@decco]
 type results = list(result);

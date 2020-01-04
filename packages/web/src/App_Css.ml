@@ -8,7 +8,19 @@ let container = [%css [
 
 let heading = [%css [
   fontSize (`px 20);
-  paddingBottom (`px 20);
+  fontWeight 700;
+  paddingBottom (`px 10);
+  textAlign `center;
+  color Color.primary;
+]]
+
+let subHeading = [%css [
+  fontSize (`px 16);
+  fontWeight 500;
+  textAlign `center;
+  color Color.primary;
+  opacity 0.6;
+  padding3 `zero (`px 40) (`px 40);
 ]]
 
 let form = [%css [
@@ -35,7 +47,8 @@ let form = [%css [
           fontSize (`px 9);
           fontWeight 700;
           right (`px 56);
-          opacity 0.7;
+          opacity 0.6;
+          color Color.primary;
         ]
       ]
     ];
@@ -49,7 +62,8 @@ let form = [%css [
           fontSize (`px 9);
           fontWeight 700;
           right (`px 56);
-          opacity 0.7;
+          opacity 0.6;
+          color Color.primary;
         ]
       ]
     ];
@@ -85,4 +99,14 @@ let search = [%css [
 
 let select = [%css [
   flexGrow 1.;
+]]
+
+let result = [%css [
+  marginTop (`px 20);
+  backgroundColor Css.Color.white;
+  padding (`px 20);
+  borderRadius (`px 8);
+  border (`px 2) `solid (`rgba(0,0,0, 0.05));
+  boxShadow ~x:`zero ~y:(`px 2) ~blur:(`px 3) ~spread: `zero ~inset:false (`rgba(0,0,0, 0.1));
+  backgroundClip `paddingBox;
 ]]

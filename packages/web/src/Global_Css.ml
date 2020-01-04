@@ -15,7 +15,7 @@ begin
     justifyContent `center;
     alignItems `center;
     height (pct 100.);
-    backgroundColor (`hex "e9e9e9");
+    backgroundColor (`hex "f5f5f5");
   ];
 
   global "h1, h2, h3, h4, h5, h6" [
