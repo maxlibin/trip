@@ -56,9 +56,9 @@ let make = () => {
     );
 
   <div className=Css.container>
-    <h1 className=Css.heading> "Check your visa requrement"->s </h1>
+    <h1 className=Css.heading> "Check visa requirements per country"->s </h1>
     <h2 className=Css.subHeading>
-      "Check visa requirement over 199 counties by selecting your country and countries that you like to visit."
+      "Check visa requirements over 199 countries by selecting your country and country that you like to visit."
       ->s
     </h2>
     <form className=Css.form>
@@ -84,14 +84,21 @@ let make = () => {
       </div>
     </form>
     {switch (from, to_, countries) {
-     | (Selected(_), Selected(to_), Some(countries)) =>
-       countries
-       ->getData(to_.label)
-       ->Option.mapWithDefault(RR.null, (data: CountryT.result) =>
-           <div className=Css.result>
-             {data.code->CountryT.visaFromInt->visaToString->s}
-           </div>
-         )
+     | (Selected(from), Selected(to_), Some(countries)) =>
+       <>
+         {from.label == to_.label
+            ? <VisaResult noResult=true>
+                "You don't need visa to travel in your own country"->s
+              </VisaResult>
+            : RR.null}
+         {countries
+          ->getData(to_.label)
+          ->Option.mapWithDefault(RR.null, (data: CountryT.result) =>
+              <VisaResult>
+                {data.code->CountryT.visaFromInt->visaToString->s}
+              </VisaResult>
+            )}
+       </>
      | _ => RR.null
      }}
   </div>;

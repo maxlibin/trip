@@ -8,7 +8,7 @@ let container = [%css [
 
 let heading = [%css [
   fontSize (`px 20);
-  fontWeight 700;
+  fontWeight 300;
   paddingBottom (`px 10);
   textAlign `center;
   color Color.primary;
@@ -16,18 +16,17 @@ let heading = [%css [
 
 let subHeading = [%css [
   fontSize (`px 16);
-  fontWeight 500;
+  fontWeight 300;
   textAlign `center;
   color Color.primary;
-  opacity 0.6;
+  opacity 0.9;
   padding3 `zero (`px 40) (`px 40);
 ]]
 
 let form = [%css [
-  backgroundColor Css.Color.white;
+  backgroundColor (`hex "f1f4ff");
   padding (`px 6);
   borderRadius (`px 8);
-  border (`px 2) `solid (`rgba(0,0,0, 0.05));
   boxShadow ~x:`zero ~y:(`px 2) ~blur:(`px 3) ~spread: `zero ~inset:false (`rgba(0,0,0, 0.1));
   backgroundClip `paddingBox;
 
@@ -40,6 +39,9 @@ let form = [%css [
   select "[class*=\"select\"]" [
     firstOfType [
       select "> div[class$=\"control\"]" [
+        borderTopRightRadius `zero;
+        borderBottomRightRadius `zero;
+
         after [
           content "From";
           position `absolute;
@@ -55,6 +57,9 @@ let form = [%css [
 
     lastOfType [
       select "> div[class$=\"control\"]" [
+        borderTopLeftRadius `zero;
+        borderBottomLeftRadius `zero;
+
         after [
           content "To";
           position `absolute;
@@ -99,14 +104,4 @@ let search = [%css [
 
 let select = [%css [
   flexGrow 1.;
-]]
-
-let result = [%css [
-  marginTop (`px 20);
-  backgroundColor Css.Color.white;
-  padding (`px 20);
-  borderRadius (`px 8);
-  border (`px 2) `solid (`rgba(0,0,0, 0.05));
-  boxShadow ~x:`zero ~y:(`px 2) ~blur:(`px 3) ~spread: `zero ~inset:false (`rgba(0,0,0, 0.1));
-  backgroundClip `paddingBox;
 ]]

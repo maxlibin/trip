@@ -19,6 +19,7 @@
   "suffix": ".bs.js",
   "namespace": true,
   "bs-dependencies": [
+    "re-classnames",
     "bs-webapi",
     "@ahrefs/bs-emotion",
     "bs-fetch",

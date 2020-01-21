@@ -19,6 +19,7 @@
     "decco": "^1.1.1",
     "dotenv-webpack": "^1.7.0",
     "firebase": "^7.6.1",
+    "re-classnames": "^4.1.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-select": "^3.0.8",
