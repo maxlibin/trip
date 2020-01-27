@@ -17,3 +17,11 @@ let fromString =
   | "home" => Home
   | "itinerary" => Itinerary
   | _ => NotFound;
+
+let cleanPath = path =>
+  switch (path) {
+  | []
+  | ["home"] => Home
+  | ["itinerary"] => Itinerary
+  | _ => NotFound
+  };

@@ -8,7 +8,11 @@ let make = (~children, ~noResult=false) => {
     {!noResult
        ? <>
            <div className=Css.airline> <Airline /> </div>
-           <Button className=Css.button> "Create your itinerary"->s </Button>
+           <Button
+             className=Css.button
+             onClick={_ => ReasonReactRouter.push("/itinerary")}>
+             "Create your itinerary"->s
+           </Button>
          </>
        : RR.null}
   </div>;
