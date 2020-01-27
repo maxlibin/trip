@@ -12,6 +12,7 @@ type countries = CountryT.results;
 
 type state = {
   selection,
+  route: RouterT.t,
   countries: option(countries),
 };
 type action =
@@ -52,7 +53,11 @@ let make = () => {
   let ({countries, selection: (from, to_)}, dispatch) =
     React.useReducer(
       reducer,
-      {countries: None, selection: (NoSelection, NoSelection)},
+      {
+        countries: None,
+        selection: (NoSelection, NoSelection),
+        route: RouterT.Home,
+      },
     );
 
   <div className=Css.container>
