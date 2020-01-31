@@ -28,7 +28,7 @@ let make = () => {
   <div>
     {switch (route) {
      | Home => <Home />
-     | Itinerary => <Itinerary />
+     | Itinerary => <Itinerary search={url.search} />
      | NotFound => "Not found"->s
      }}
   </div>;

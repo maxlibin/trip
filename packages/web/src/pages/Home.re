@@ -94,7 +94,7 @@ let make = () => {
          {countries
           ->getData(to_.label)
           ->Option.mapWithDefault(RR.null, (data: CountryT.result) =>
-              <VisaResult>
+              <VisaResult to_>
                 {data.code->CountryT.visaFromInt->visaToString->s}
               </VisaResult>
             )}
