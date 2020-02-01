@@ -3,11 +3,7 @@ module Css = VisaResult_Css;
 
 [@react.component]
 let make =
-    (
-      ~children,
-      ~to_: option(Tripdeer.ReactSelect.Country.opt)=?,
-      ~noResult=false,
-    ) => {
+    (~children, ~to_: option(ReactSelect.Country.opt)=?, ~noResult=false) => {
   <div className=Css.result>
     children
     {!noResult
