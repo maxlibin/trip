@@ -43,7 +43,7 @@ let make = (~search) => {
   <div>
     <h1 className=Css.title> {country->CountryT.toString->s} </h1>
     {switch (itineraries) {
-     | [] => RR.null
+     | [] => <Editable index=0 />
      | _ =>
        <ul>
          {itineraries
