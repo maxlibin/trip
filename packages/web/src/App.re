@@ -1,5 +1,7 @@
 open Prelude;
 
+module Css = App_Css;
+
 type state = {route: RouterT.t};
 
 type action =
@@ -25,7 +27,7 @@ let make = () => {
     [|url|],
   );
 
-  <div>
+  <div className=Css.container>
     {switch (route) {
      | Home => <Home />
      | Itinerary => <Itinerary search={url.search} />

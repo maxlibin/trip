@@ -15,12 +15,19 @@ let placeHolder = [%css [
   position `absolute;
   color (`rgba(0,0,0, 0.3));
   zIndex 0;
+  display `none;
 ]]
 
 let editable = [%css [
   position `relative;
   fontSize (`px 18);
   fontWeight 300;
+
+  hover [
+    select {j|.$placeHolder|j} [
+      display `block;
+    ]
+  ];
 ]]
 
 let editableContent = [%css [
