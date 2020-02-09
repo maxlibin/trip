@@ -4,7 +4,7 @@ let day = [%css [
   position `absolute;
   outlineWidth `zero;
   fontSize (`px 18);
-  left (`px (-170));
+  left (`px (-200));
   width (`px 150);
   textAlign `right;
   fontWeight 900;

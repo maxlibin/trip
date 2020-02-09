@@ -102,23 +102,27 @@ let make = (~search) => {
                   text={itinerary.value}
                   index=idx
                   onBlur={value => {
-                    Js.log("changed");
-                    value->setItinerties(itineraries, idx, dispatch);
+                    value->setItinerties(itineraries, idx, dispatch)
                   }}
                 />
               </li>
             })
           ->RR.list}
-         <li key={itineraries->List.length->string_of_int}>
+         <li
+           className=Css.listItem
+           key={itineraries->List.length->string_of_int}>
            <Editable
              index={itineraries->List.length}
              onBlur={value => {
-               Js.log("set...");
-               value->setItinerties(
-                 itineraries,
-                 itineraries->List.length,
-                 dispatch,
-               );
+               switch (value) {
+               | "" => ()
+               | _ =>
+                 value->setItinerties(
+                   itineraries,
+                   itineraries->List.length,
+                   dispatch,
+                 )
+               }
              }}
            />
          </li>
