@@ -7,50 +7,58 @@ type itinerary = {
   value: string,
 };
 
+type inputFocusingEvent =
+  | Focus
+  | Blur
+  | NoEvent;
+
 type state = {
   country: CountryT.t,
   itineraries: list(itinerary),
+  inputFocusingEvent,
 };
 
 type action =
   | GetCountry(CountryT.t)
-  | GetItineraries(list(itinerary));
+  | GetItineraries(list(itinerary))
+  | InputFocusingEventChanged(inputFocusingEvent);
 
 let reducer = (state, action) => {
   switch (action) {
   | GetCountry(country) => {...state, country}
   | GetItineraries(itineraries) => {...state, itineraries}
+  | InputFocusingEventChanged(inputFocusingEvent) => {
+      ...state,
+      inputFocusingEvent,
+    }
   };
 };
 
-let partialItinerties = (itineraries, index, value) => {
-  let (left, right) =
-    itineraries->List.partition(({index: indexItinerary}) =>
-      indexItinerary < index
-    );
-  List.concat(left, [value])
-  ->List.concat(right->List.keep(iti => iti.index != index));
-};
-
 let setItinerties = (value, itineraries, index, dispatch) =>
-  switch (index, itineraries->List.get(index)->Option.isNone) {
+  switch (index, itineraries->List.get(index)->Option.isSome) {
+  | (0, false) => dispatch @@ GetItineraries([{index, value}])
   | (_, true) =>
-    dispatch @@ GetItineraries(itineraries->List.concat([{index, value}]))
-  | (0, false) =>
     dispatch @@
     GetItineraries(
-      [{index, value}]
-      ->List.concat(itineraries->List.keep(item => index != item.index)),
+      itineraries->List.map(item =>
+        index == item.index
+          ? {index: item.index, value}
+          : {index: item.index, value: item.value}
+      ),
     )
   | (_, false) =>
-    dispatch @@
-    GetItineraries(itineraries->partialItinerties(index, {index, value}))
+    Js.log("come here");
+    Js.log(index);
+    dispatch @@ GetItineraries(itineraries->List.concat([{index, value}]));
   };
 
 [@react.component]
 let make = (~search) => {
   let ({country, itineraries}, dispatch) =
-    React.useReducer(reducer, {country: NONE, itineraries: []});
+    React.useReducer(
+      reducer,
+      {country: NONE, itineraries: [], inputFocusingEvent: NoEvent},
+    );
 
   React.useEffect1(
     () => {
@@ -77,13 +85,14 @@ let make = (~search) => {
          <li className=Css.listItem>
            <Editable
              index=0
-             onChange={value =>
-               value->setItinerties(itineraries, 0, dispatch)
-             }
+             onFocus={_ => dispatch @@ InputFocusingEventChanged(Focus)}
+             onBlur={value => {
+               value->setItinerties(itineraries, 0, dispatch);
+               dispatch @@ InputFocusingEventChanged(Blur);
+             }}
            />
          </li>
        </ul>
-
      | _ =>
        <ul className=Css.list>
          {itineraries
@@ -92,13 +101,27 @@ let make = (~search) => {
                 <Editable
                   text={itinerary.value}
                   index=idx
-                  onChange={value =>
-                    value->setItinerties(itineraries, idx, dispatch)
-                  }
+                  onBlur={value => {
+                    Js.log("changed");
+                    value->setItinerties(itineraries, idx, dispatch);
+                  }}
                 />
               </li>
             })
           ->RR.list}
+         <li key={itineraries->List.length->string_of_int}>
+           <Editable
+             index={itineraries->List.length}
+             onBlur={value => {
+               Js.log("set...");
+               value->setItinerties(
+                 itineraries,
+                 itineraries->List.length,
+                 dispatch,
+               );
+             }}
+           />
+         </li>
        </ul>
      }}
   </div>;
