@@ -2,6 +2,7 @@
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
-    "dev": "cd packages/web && yarn dev"
+    "dev": "cd packages/web && yarn dev",
+    "build": "cd packages/web && yarn build"
   }
 }
