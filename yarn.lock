@@ -2,15 +2,17 @@
 # yarn lockfile v1
 
 
-"@ahrefs/bs-emotion-ppx@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@ahrefs/bs-emotion-ppx/-/bs-emotion-ppx-1.0.0.tgz#e1b5469dc7bbc507508b9fa5cd53422f831ebf40"
+"@ahrefs/bs-emotion-ppx@^1.0.2-dev.1":
+  version "1.0.2-dev.1"
+  resolved "https://registry.yarnpkg.com/@ahrefs/bs-emotion-ppx/-/bs-emotion-ppx-1.0.2-dev.1.tgz#603428eb08945c996ab61c6849f44242a73ac8e4"
+  integrity sha512-1ZY3ONkXDyfQ3ErkgMPzt97wKnLf/MnzVzISorTYlrES4udWM3/E4tnChZ83+Ot1T6zLxwHDAUstdW38OrF9kA==
 
-"@ahrefs/bs-emotion@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@ahrefs/bs-emotion/-/bs-emotion-1.0.0.tgz#1463f7c246ca0d65dbd45c854cca00ea72bda257"
+"@ahrefs/bs-emotion@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@ahrefs/bs-emotion/-/bs-emotion-1.0.1.tgz#8fbca5b5ee14a4db21e965d67a2e4053f6f825ea"
+  integrity sha512-oUSKPX/JZ3UDSrdlNj8cesO7yuxwnxS6PvHK3ZA0uI69jkwGJY7ZUDxzYWRg6x/6fZ8qGSSUEoq/moBmwmpjUg==
   dependencies:
-    "@minima.app/re-css" "0.1.0"
+    "@minima.app/re-css" "1.0.1"
     emotion "9.2.12"
 
 "@ahrefs/bs-react-dates@^0.0.15":
@@ -393,9 +395,10 @@
     lodash.camelcase "^4.3.0"
     protobufjs "^6.8.6"
 
-"@minima.app/re-css@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@minima.app/re-css/-/re-css-0.1.0.tgz#482295907f26ac8bfb0e2e71213407a53afdf423"
+"@minima.app/re-css@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@minima.app/re-css/-/re-css-1.0.1.tgz#605854db397987c9adbdfb991ebe56e9191c2f3d"
+  integrity sha512-j0ocaNP4K7/XdSUy7GhH/MTqyq4ZDeCiRXffoUn85fg5V5bwnD57XZzd5miCBEFRxctgNdBdhp2+x3KSbd3uow==
 
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
   version "1.1.2"
