@@ -2,7 +2,7 @@
   "name": "tripdeer",
   "version": "0.1.0",
   "scripts": {
-    "prebuild": "bsb -make-world ",
+    "prebuild": "bsb -clean-world && bsb -make-world ",
     "build": "webpack --config webpack.config.js --mode=production",
     "start": "bsb -clean-world && bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",

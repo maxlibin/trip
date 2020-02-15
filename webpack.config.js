@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const url = require("url");
 const webpack = require("webpack");
-const Dotenv = require("dotenv-webpack");
+// const Dotenv = require("dotenv-webpack");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const outputDir = path.join(__dirname, "build/");
@@ -40,8 +40,8 @@ module.exports = (_, argv) => {
       new HtmlWebpackPlugin({
         template: "./src/index.html",
         inject: true
-      }),
-      new Dotenv({ path: path.resolve(__dirname, ".env") })
+      })
+      // new Dotenv({ path: path.resolve(__dirname, ".env") })
     ]
   };
 };
