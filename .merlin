@@ -1,0 +1,40 @@
+####{BSB GENERATED: NO EDIT
+B lib/bs
+FLG -open Tripdeer
+FLG -ppx /Users/maxli/workspace/tripdeer/node_modules/bs-let/ppx
+FLG -ppx /Users/maxli/workspace/tripdeer/node_modules/@ahrefs/bs-emotion-ppx/bin/bs-emotion-ppx
+FLG -ppx /Users/maxli/workspace/tripdeer/node_modules/decco/ppx
+FLG -ppx '/Users/maxli/workspace/tripdeer/node_modules/bs-platform/lib/bsppx.exe -bs-jsx 3'
+S /Users/maxli/workspace/tripdeer/node_modules/bs-platform/lib/ocaml
+B /Users/maxli/workspace/tripdeer/node_modules/bs-platform/lib/ocaml
+FLG -nostdlib -open Belt
+FLG -w -30-40+6+7+27+32..39+44+45+101
+S /Users/maxli/workspace/tripdeer/node_modules/re-classnames/lib/ocaml
+B /Users/maxli/workspace/tripdeer/node_modules/re-classnames/lib/ocaml
+S /Users/maxli/workspace/tripdeer/node_modules/bs-webapi/lib/ocaml
+B /Users/maxli/workspace/tripdeer/node_modules/bs-webapi/lib/ocaml
+S /Users/maxli/workspace/tripdeer/node_modules/@ahrefs/bs-emotion/lib/ocaml
+B /Users/maxli/workspace/tripdeer/node_modules/@ahrefs/bs-emotion/lib/ocaml
+S /Users/maxli/workspace/tripdeer/node_modules/@ahrefs/bs-react-dates/lib/ocaml
+B /Users/maxli/workspace/tripdeer/node_modules/@ahrefs/bs-react-dates/lib/ocaml
+S /Users/maxli/workspace/tripdeer/node_modules/bs-fetch/lib/ocaml
+B /Users/maxli/workspace/tripdeer/node_modules/bs-fetch/lib/ocaml
+S /Users/maxli/workspace/tripdeer/node_modules/decco/lib/ocaml
+B /Users/maxli/workspace/tripdeer/node_modules/decco/lib/ocaml
+S /Users/maxli/workspace/tripdeer/node_modules/reason-react/lib/ocaml
+B /Users/maxli/workspace/tripdeer/node_modules/reason-react/lib/ocaml
+S src
+B lib/bs/src
+S src/helpers
+B lib/bs/src/helpers
+S src/pages
+B lib/bs/src/pages
+S src/bindings
+B lib/bs/src/bindings
+S src/components
+B lib/bs/src/components
+S src/components/icons
+B lib/bs/src/components/icons
+S src/types
+B lib/bs/src/types
+####BSB GENERATED: NO EDIT}
