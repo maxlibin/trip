@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@ahrefs/bs-emotion": "^1.0.0",
+    "@ahrefs/bs-react-dates": "^0.0.15",
     "bs-fetch": "^0.5.0",
     "bs-let": "^0.1.11",
     "bs-webapi": "^0.15.6",

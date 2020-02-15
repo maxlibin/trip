@@ -22,6 +22,7 @@
     "re-classnames",
     "bs-webapi",
     "@ahrefs/bs-emotion",
+    "@ahrefs/bs-react-dates",
     "bs-fetch",
     "decco",
     "reason-react"
