@@ -47,9 +47,7 @@ let setItinerties = (value, itineraries, index, dispatch) =>
       ),
     )
   | (_, false) =>
-    Js.log("come here");
-    Js.log(index);
-    dispatch @@ GetItineraries(itineraries->List.concat([{index, value}]));
+    dispatch @@ GetItineraries(itineraries->List.concat([{index, value}]))
   };
 
 [@react.component]
@@ -78,7 +76,13 @@ let make = (~search) => {
   );
 
   <div className=Css.container>
-    <h1 className=Css.title> {country->CountryT.toString->s} </h1>
+    <h1 className=Css.title>
+      <Back
+        onClick={_ => ReasonReactRouter.push("/")}
+        className=Css.backIcon
+      />
+      {country->CountryT.toString->s}
+    </h1>
     {switch (itineraries) {
      | [] =>
        <ul className=Css.list>

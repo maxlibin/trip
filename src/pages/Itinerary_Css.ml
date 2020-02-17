@@ -10,6 +10,8 @@ let title = [%css [
   marginBottom (`px 40);
   fontWeight 900;
   fontSize (`px 28);
+  display `flex;
+  alignItems `center;
 ]]
 
 let list = [%css [
@@ -41,5 +43,18 @@ let listItem = [%css [
     backgroundColor Color.primary;
     borderRadius (`pct 50.);
     zIndex 1;
+  ]
+]]
+
+let backIcon = [%css [
+  marginRight (`px 15);
+  marginLeft (`px (- 20));
+  width (`px 24);
+  height (`px 24);
+  opacity 0.7;
+  cursor `pointer;
+
+  hover [
+    opacity 1.;
   ]
 ]]
