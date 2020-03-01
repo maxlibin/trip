@@ -19,10 +19,10 @@
   "suffix": ".bs.js",
   "namespace": true,
   "bs-dependencies": [
+    "bs-moment",
     "re-classnames",
     "bs-webapi",
     "@ahrefs/bs-emotion",
-    "@ahrefs/bs-react-dates",
     "bs-fetch",
     "decco",
     "reason-react"

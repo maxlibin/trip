@@ -1,5 +1,7 @@
 open Prelude;
 
+[%bs.raw {|require('react-dates/lib/css/_datepicker.css')|}];
+
 module Css = Itinerary_Css;
 
 type itinerary = {
@@ -16,6 +18,7 @@ type state = {
   country: CountryT.t,
   itineraries: list(itinerary),
   inputFocusingEvent,
+  date: option(MomentRe.Moment.t),
 };
 
 type action =
@@ -55,7 +58,12 @@ let make = (~search) => {
   let ({country, itineraries}, dispatch) =
     React.useReducer(
       reducer,
-      {country: NONE, itineraries: [], inputFocusingEvent: NoEvent},
+      {
+        country: NONE,
+        itineraries: [],
+        date: Some(MomentRe.momentNow()),
+        inputFocusingEvent: NoEvent,
+      },
     );
 
   React.useEffect1(
@@ -82,6 +90,13 @@ let make = (~search) => {
         className=Css.backIcon
       />
       {country->CountryT.toString->s}
+      <BSReactDates
+        date=None
+        id="dateId"
+        focused=true
+        onDateChange={_ => ()}
+        onFocusChange={_ => ()}
+      />
     </h1>
     {switch (itineraries) {
      | [] =>

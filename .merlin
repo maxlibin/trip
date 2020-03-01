@@ -9,14 +9,14 @@ S /Users/maxli/workspace/tripdeer/node_modules/bs-platform/lib/ocaml
 B /Users/maxli/workspace/tripdeer/node_modules/bs-platform/lib/ocaml
 FLG -nostdlib -open Belt
 FLG -w -30-40+6+7+27+32..39+44+45+101
+S /Users/maxli/workspace/tripdeer/node_modules/bs-moment/lib/ocaml
+B /Users/maxli/workspace/tripdeer/node_modules/bs-moment/lib/ocaml
 S /Users/maxli/workspace/tripdeer/node_modules/re-classnames/lib/ocaml
 B /Users/maxli/workspace/tripdeer/node_modules/re-classnames/lib/ocaml
 S /Users/maxli/workspace/tripdeer/node_modules/bs-webapi/lib/ocaml
 B /Users/maxli/workspace/tripdeer/node_modules/bs-webapi/lib/ocaml
 S /Users/maxli/workspace/tripdeer/node_modules/@ahrefs/bs-emotion/lib/ocaml
 B /Users/maxli/workspace/tripdeer/node_modules/@ahrefs/bs-emotion/lib/ocaml
-S /Users/maxli/workspace/tripdeer/node_modules/@ahrefs/bs-react-dates/lib/ocaml
-B /Users/maxli/workspace/tripdeer/node_modules/@ahrefs/bs-react-dates/lib/ocaml
 S /Users/maxli/workspace/tripdeer/node_modules/bs-fetch/lib/ocaml
 B /Users/maxli/workspace/tripdeer/node_modules/bs-fetch/lib/ocaml
 S /Users/maxli/workspace/tripdeer/node_modules/decco/lib/ocaml
